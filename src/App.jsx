@@ -1,3 +1,4 @@
+import Footer from "./components/footer/Footer";
 import Topbar from "./components/topbar/Topbar";
 import Homepage from "./pages/homepage/Homepage";
 import Login from "./pages/login/Login";
@@ -8,8 +9,9 @@ import Write from "./pages/write/Write";
 import { BrowserRouter as Router,  Route, Routes } from "react-router-dom";
 
 function App() {
-  const currentUser = true;
+ 
   return (
+    <>
     <Router>
       <Topbar />
       <Routes>
@@ -21,6 +23,8 @@ function App() {
         <Route path="/settings"  element={<Settings />} />  
       </Routes>
     </Router>
+      <Footer />
+     </>
   );
 }
 
