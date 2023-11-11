@@ -2,37 +2,37 @@ import "./Write.css";
 
 export default function Write() {
   return (
-    <div className="write">
-      <img
-        className="writeImg"
-        src="https://images.pexels.com/photos/6685428/pexels-photo-6685428.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-        alt=""
-      />
-      <form className="writeForm">
-        <div className="writeFormGroup">
-          <label htmlFor="fileInput">
-            <i className="writeIcon fas fa-plus"></i>
-          </label>
-          <input id="fileInput" type="file" style={{ display: "none" }} />
-          <input
-            className="writeInput"
-            placeholder="Title"
-            type="text"
-            autoFocus={true}
-          />
+    <div>
+      <h1>Create Page</h1>
+      <form>
+        <div>
+          <label htmlFor="title">Book Title:</label>
+          <input type="text" id="title" />
         </div>
-        <div className="writeFormGroup">
-          <textarea
-            className="writeInput writeText"
-            placeholder="Tell your story..."
-            type="text"
-            autoFocus={true}
-          />
+        <div>
+          <label htmlFor="review">Book Review:</label>
+          <textarea id="review"></textarea>
         </div>
-        <button className="writeSubmit" type="submit">
-          Publish
-        </button>
+        <div>
+          <label htmlFor="genre">Book Genre:</label>
+          <select id="genre">
+            <option value="Fiction">Fiction</option>
+            <option value="Non-fiction">Non-fiction</option>
+            <option value="Mystery">Mystery</option>
+            <option value="Science Fiction">Science Fiction</option>
+            {/* Add more genre options as needed */}
+          </select>
+        </div>
+        <div>
+        <label for="image">Book Image URL:</label>
+        <input type="url" id="image"/>
+      </div>
+        <div>
+          <label htmlFor="stars">Rating:</label>
+          <input type="number" id="stars" min="0" max="5" />
+        </div>
+        <button type="submit">Submit</button>
       </form>
     </div>
   );
-}
+};
