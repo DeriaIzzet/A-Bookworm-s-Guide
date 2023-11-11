@@ -3,39 +3,28 @@ import "./Post.css";
 
 export default function Post({img}) {
   return (
-    <div className="post">
-      <img
-        className="postImg"
-        src={img}
-        alt=""
-      />
-      <div className="postInfo">
-        <div className="postCats">
-          <span className="postCat">
-            <Link className="link" to="/posts?cat=Music">
-              Music
-            </Link>
-          </span>
-          <span className="postCat">
-            <Link className="link" to="/posts?cat=Music">
-              Life
-            </Link>
-          </span>
-        </div>
-        <span className="postTitle">
-          <Link to="/post/abc" className="link">
-            Lorem ipsum dolor sit amet
-          </Link>
-        </span>
-        <hr />
-        <span className="postDate">1 hour ago</span>
+    <div className="review-container">
+  
+    <div className="review-details">
+      <div className="detail-item">
+      <div className="detail-item">
+        <img className="detail-content" id="image" src="https://images.pexels.com/photos/6685428/pexels-photo-6685428.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="Book Cover" />
       </div>
-      <p className="postDesc">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda
-        officia architecto deserunt deleniti? Labore ipsum aspernatur magnam
-        fugiat, reprehenderit praesentium blanditiis quos cupiditate ratione
-        atque, exercitationem quibusdam, reiciendis odio laboriosam?
-      </p>
+        <p className="detail-content" id="title">Sample Book Title</p>
+      </div>
+      <div className="detail-item">
+        <label>Review:</label>
+        <p className="detail-content" id="review">This is a sample book review. It could be a detailed description of the book.</p>
+      </div>
+      <div className="detail-item">
+        <label>Genre:</label>
+        <p className="detail-content" id="genre">Fiction</p>
+      </div>
+      <div className="detail-item">
+        <label>Rating:</label>
+        <p className="detail-content" id="stars">4.5</p>
+      </div>
     </div>
+  </div>
   );
 }
