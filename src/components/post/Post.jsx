@@ -8,7 +8,7 @@ export default function Post({img}) {
     <div className="review-details">
       <div className="detail-item">
       <div className="detail-item">
-        <img className="detail-content" id="image" src="https://images.pexels.com/photos/6685428/pexels-photo-6685428.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="Book Cover" />
+        <img className="detail-content" id="image" src={img} alt="Book Cover" />
       </div>
         <p className="detail-content" id="title">Sample Book Title</p>
       </div>
