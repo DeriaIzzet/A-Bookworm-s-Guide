@@ -1,6 +1,3 @@
-.header {
-    margin-top: 60px;
-}
 
 .headerTitleSm {
     font-size: large;
@@ -11,24 +8,29 @@
     flex-direction: column;
     align-items: center;
     font-family: "Lora", serif;
-    color: rgb(245, 242, 242);
+    color: rgb(246, 244, 244);
 }
 
 .headerTitleSm {
     position: absolute;
     top: 18%;
-    font-size: 20px;
+    font-size: 30px;
 }
 
 .headerTitleLg {
     position: absolute;
-    top: 20%;
+    top: 22%;
     font-size: 100px;
+    color: #202c2d;
+text-shadow: 0 1px #808d93, -1px 0 #cdd2d5, -1px 2px #808d93, -2px 1px #cdd2d5, -2px 3px #808d93, -3px 2px #cdd2d5, -3px 4px #808d93, -4px 3px #cdd2d5, -4px 5px #808d93, -5px 4px #cdd2d5, -5px 6px #808d93, -6px 5px #cdd2d5, -6px 7px #808d93, -7px 6px #cdd2d5, -7px 8px #808d93, -8px 7px #cdd2d5;
+color: #e7eeef;
+
 }
+
 
 .headerImg {
     width: 100%;
     height: 500px;
-    margin-top: 60px;
     object-fit: cover;
+   
 }

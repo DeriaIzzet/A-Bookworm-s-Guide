@@ -1,4 +1,5 @@
 import "./Header.css";
+import videoHeader from "../../../public/pexels_videos_2268807 (1080p).mp4"
 
 export default function Header() {
   return (
@@ -7,10 +8,10 @@ export default function Header() {
         <span className="headerTitleSm">Living The Reader Life</span>
         <span className="headerTitleLg">A Bookworm’s Guide</span>
       </div>
-      <img
+      <video
         className="headerImg"
-        src="https://images.pexels.com/photos/983200/pexels-photo-983200.jpeg?auto=compress&cs=tinysrgb&w=1600"
-        alt=""
+        src={videoHeader}
+       autoPlay loop
       />
     </div>
   );
