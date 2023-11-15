@@ -4,9 +4,11 @@ import "./Single.css";
 
 export default function Single() {
   return (
-    <div className="single">
+    <div className="single-div">
       <SinglePost />
-      <Sidebar />
+      <div>
+        <Sidebar />
+    </div>
     </div>
   );
 }
