@@ -5,7 +5,7 @@ body {
   background-color: #f4f4f4;
 }
 
-.review-container {
+.reviewHome-container {
   text-align: center;
   margin: 50px auto;
 }
@@ -14,7 +14,7 @@ h1 {
   color: #333;
 }
 
-.review-details {
+.reviewHome-details {
   max-width: 600px;
   margin: 20px auto;
   background-color: #fff;
