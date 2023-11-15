@@ -4,6 +4,7 @@ export default function Write() {
   return (
     <div>
       <h1>Create Review</h1>
+      <div className="writePage-div">
       <form id = "create">
         <div>
           <label htmlFor="title">Book Title:</label>
@@ -35,6 +36,7 @@ export default function Write() {
         </div>
         <button type="submit">Submit</button>
       </form>
+      </div>
     </div>
   );
 };
