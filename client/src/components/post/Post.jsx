@@ -1,28 +1,37 @@
 import { Link } from "react-router-dom";
 import "./Post.css";
 
-export default function Post({img}) {
+export default function Post({
+  bookTitle, Author ,imageUrl,bookGenre,bookReview,bookRating
+}) {
   return (
-    <div className="review-container">
+    <div className="reviewHome-container">
   
-    <div className="review-details">
+    <div className="reviewHome-details">
+      
       <div className="detail-item">
       <div className="detail-item">
-        <img className="detail-content" id="image" src={img} alt="Book Cover" />
+      <Link className="link" to="/review">
+        <img className="detail-content" id="image" src={imageUrl} alt="Book Cover" />   
+          </Link>
       </div>
-        <p className="detail-content" id="title">Sample Book Title</p>
+        <p className="detail-content" id="title">{bookTitle}</p>
+      </div>
+      {/* <div className="detail-item">
+        <label>Author:</label>
+        <p className="detail-content" id="review">{Author}</p>
       </div>
       <div className="detail-item">
         <label>Review:</label>
-        <p className="detail-content" id="review">This is a sample book review. It could be a detailed description of the book.</p>
+        <p className="detail-content" id="review">{bookReview}</p>
       </div>
       <div className="detail-item">
         <label>Genre:</label>
-        <p className="detail-content" id="genre">Fiction</p>
-      </div>
+        <p className="detail-content" id="genre">{bookGenre}</p>
+      </div> */}
       <div className="detail-item">
-        <label>Rating:</label>
-        <p className="detail-content" id="stars">4.5</p>
+        {/* <label>Rating:</label> */}
+        <p className="detail-content" id="stars">Reader rated this, {bookRating}/5 stars!</p>
       </div>
     </div>
   </div>
