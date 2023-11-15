@@ -11,7 +11,7 @@ export default function Header() {
       <video
         className="headerImg"
         src={videoHeader}
-       autoPlay loop
+        autoPlay loop
       />
     </div>
   );

@@ -19,7 +19,7 @@ export default function Topbar() {
             </Link>
           </li>
           <li className="topListItem">
-            <Link to="/posts">
+            <Link to="/catalog">
               All Reviews
             </Link></li>
           <li className="topListItem">
