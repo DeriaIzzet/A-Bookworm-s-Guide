@@ -9,22 +9,22 @@ export const getAll = async () => {
     return reviews;
 };
 
-// export const getOne = async (reviewId) => {
-//     const result = await request.get(`${baseUrl}/${reviewId}`);
+export const getOne = async (reviewId) => {
+    const result = await request.get(`${baseUrl}/${reviewId}`);
 
-//     return result;
-// };
+    return result;
+};
 
-// export const create = async (reviewData) => {
-//     const result = await request.post(baseUrl, reviewData);
+export const create = async (reviewData) => {
+    const result = await request.post(baseUrl, reviewData);
 
-//     console.log(result);
+    console.log(result);
 
-//     return result;
-// };
+    return result;
+};
 
-// export const addComment = async (reviewId, data) => {
-//     const result = await request.post(`${baseUrl}/${reviewId}/comments`, data);
+export const addComment = async (reviewId, data) => {
+    const result = await request.post(`${baseUrl}/${reviewId}/comments`, data);
 
-//     return result;
-// };
+    return result;
+};
