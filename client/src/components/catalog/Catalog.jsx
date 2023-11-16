@@ -18,7 +18,7 @@ export default function Catalog({
       />
     </div>
       <div className="catalog-div">
-      {reviews.map(x => <SinglePost key={x._id} {...x}/>)}
+      {reviews.map(x => <SinglePost key={x._id} {...x} />).reverse()}
       </div>
       {reviews.length === 0 && ( <h6 className="no-reviews">No Reviews Yet</h6> ) }
     </section>
