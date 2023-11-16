@@ -14,10 +14,9 @@ export default function Homepage({
   return (
     <>
       <Header />
-      
       <div className="home">
       <div className="posts">
-      {reviews.map(x => <Post key={x._id} {...x}/>)}
+      {reviews.map(x => x.bookRating == 5 ? <Post key={x._id} {...x}/>: null)}
     </div>
     <div>
         <Sidebar />
