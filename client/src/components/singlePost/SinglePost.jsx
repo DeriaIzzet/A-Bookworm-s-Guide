@@ -2,7 +2,7 @@ import "./SinglePost.css"
 import { Link } from "react-router-dom";
 
 export default function SinglePost({
-  bookTitle, imageUrl, Author, bookGenre, bookReview, bookRating
+  bookTitle, imageUrl, author, bookGenre, bookReview, bookRating
 }) {
   return (
     <div className="review-container">
@@ -19,7 +19,7 @@ export default function SinglePost({
       </div>
       <div className="detail-item">
         <label>Author:</label>
-        <p className="detail-content" id="review">{Author}</p>
+        <p className="detail-content" id="review">{author}</p>
       </div>
       {/* <div className="detail-item">
         <label>Review:</label>
