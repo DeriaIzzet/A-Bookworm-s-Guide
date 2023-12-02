@@ -1,0 +1,32 @@
+.catalog-section {
+    text-align: center;
+  
+  }
+  .headerTitleLg{
+    color:rgb(238, 235, 231);
+  }
+  
+  .heading {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .catalog-div {
+    display: flex;
+    flex-direction: row;
+   flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  
+  .no-reviews {
+    margin-top: 20px;
+    font-size: 170px;
+    color: rgb(192, 146, 82);
+    font-family: 'Times New Roman', serif;
+  }
+
+  .headerImg {
+    width: 100%;
+    height: 500px;
+     object-fit: cover;   
+}
