@@ -16,7 +16,7 @@ export default function Homepage({
       <Header />
       <div className="home">
       <div className="posts">
-      {reviews.map(x => x.bookRating == 5 ? <Post key={x._id} {...x}/>: null)}
+      {reviews.map(x => x.bookRating == 5 ? <Post key={x._id} {...x}/>: null).reverse()}
     </div>
     <div>
         <Sidebar />
