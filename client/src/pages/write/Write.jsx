@@ -24,10 +24,11 @@ export default function Write({
   }
   
   return (
-    <div>
-      <h1>Create Review</h1>
+    <div className="write-body">
+      <h1 className="header-h1">Create Review</h1>
       <div className="writePage-div">
       <form id="create" onSubmit={onSubmit}>
+        <div className="write">
         <div>
           <label htmlFor="title">Book Title:</label>
           <input value={values.bookTitle} onChange={onChangeHandler} type="text" id="bookTitle" name="bookTitle" placeholder="Enter book title..."/>
@@ -53,6 +54,7 @@ export default function Write({
           <input value={values.bookRating} onChange={onChangeHandler} type="number" id="bookRating" name="bookRating" min="0" max="5" />
         </div>
         <button type="submit">Submit</button>
+        </div>
       </form>
       </div>
     </div>
