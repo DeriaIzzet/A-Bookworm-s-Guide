@@ -20,18 +20,18 @@ export default function Topbar() {
           </li>
           <li className="topListItem">
             <Link to="/catalog">
-              All Reviews
+              ALL REVIEWS
             </Link></li>
           <li className="topListItem">
             <Link  to="/create-review">
-              Create Review
+             CREATE REVIEW
             </Link>
           </li>
           {user && <li className="topListItem">LOGOUT</li>}
         </ul>
       </div>
       <div className="topRight">
-        {user ? (
+        
           <Link className="link" to="/settings">
             <img
               className="topImg"
@@ -39,7 +39,7 @@ export default function Topbar() {
               alt=""
             />
           </Link>
-        ) : (
+        
           <ul className="topList">
             <li className="topListItem">
               <Link className="link" to="/login">
@@ -52,7 +52,6 @@ export default function Topbar() {
               </Link>
             </li>
           </ul>
-        )}
         <i className="topSearchIcon fas fa-search"></i>
       </div>
     </div>
