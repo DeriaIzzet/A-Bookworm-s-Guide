@@ -5,6 +5,11 @@ import { useContext } from "react";
 import { useForm } from "../../hooks/useForm";
 import { AuthContext } from "../../contexts/AuthContext";
 
+const RegisterFormKeys = {
+  Email: 'email',
+  Password: 'password',
+  Username: 'username'
+};
 export default function Register() {
   const { onRegisterSubmit } = useContext(AuthContext);
   const { values, changeHandler, onSubmit } = useForm(
@@ -12,7 +17,7 @@ export default function Register() {
       [RegisterFormKeys.Username]: "",
       [RegisterFormKeys.Email]: "",
       [RegisterFormKeys.Password]: "",
-    }.onRegisterSubmit
+    },onRegisterSubmit
   );
   return (
     <div className="register">
@@ -44,7 +49,7 @@ export default function Register() {
         <input
           className="registerInput"
           type="password"
-          id="login-password"
+          id="password"
           autoComplete="current-password"
           placeholder="Enter password ..."
           name={RegisterFormKeys.Password}
