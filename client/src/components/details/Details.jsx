@@ -1,10 +1,11 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import * as reviewService from "../../services/reviewService";
+import{reviewServiceMaker} from "../../services/reviewService";
 import "./Details.css"
 export default function Details() {
   const { reviewId } = useParams();
   const [review, setReview] = useState({});
+  const reviewService = 
 
   useEffect(() => {
     reviewService.getOne(reviewId).then((result) => {
