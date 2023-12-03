@@ -1,69 +1,97 @@
 .top {
-    width: 100%;
-    height: 50px;
-    background-color:rgb(184, 136, 70);
-    position: sticky;
-    top: 0;
-    display: flex;
-    align-items: center;
-    z-index: 999;
-    font-family: 'Times New Roman', serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+}
 
-  }
+/* Style for the left section of the top bar */
+.topLeft {
+  display: flex;
+  align-items: center;
+}
+
+.topIcon {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+/* Style for the center section of the top bar */
+.topCenter {
+  display: flex;
+  align-items: center;
+  flex: 1; /* Take up remaining space in the center */
+}
+
+.noUser {
+  display: flex;
+  align-items: center;
+}
+
+.noUser a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 14px;
+}
+
+/* Style for the right section of the top bar */
+.topRight {
+  display: flex;
+  align-items: center;
+}
+
+.loginRegister a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 14px;
+}
+
+.topImg {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.profile {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  cursor: pointer;
+  margin-left: 800px;
+}
+
+.profile p,
+.profile span {
+  margin: 5px 0;
+  font-size: 14px;
+  margin-right: 10px;
   
-  .topLeft,
-  .topRight {
-    flex: 3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .topIcon {
-    font-size: 20px;
-    margin-right: 10px;
-    color: #444;
-    cursor: pointer;
-  }
-  
-  .topCenter {
-    flex: 6;
-    
-  }
-  
-  .topList {
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    color: rgb(75, 52, 121);
-  }
-  
-  .topListItem {
-    margin-right: 20px;
-    font-size: 18px;
-    font-weight: 300;
-    cursor: pointer;
-  }
-  
-  .topListItem:hover{
-      color: rgb(34, 31, 31);
-  }
-  
-  .topImg {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 15px;
-    cursor: pointer;
-  }
-  li a{
-    text-decoration: none;
-  }
-  .topSearchIcon {
-    font-size: 18px;
-    color: #666; 
-    cursor: pointer;
-  }
+}
+
+.topList {
+  display: flex;
+  align-items: center;
+}
+
+.topList a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 14px;
+}
+
+.topListItem {
+  margin: 0 10px;
+}
+
+.topListItem a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
