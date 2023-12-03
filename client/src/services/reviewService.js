@@ -1,30 +1,48 @@
-import * as request from './requester';
+import {requestMaker} from './requester';
 
 const baseUrl = 'http://localhost:3030/jsonstore/reviews';
 
-export const getAll = async () => {
-    const result = await request.get( baseUrl)
-    const reviews = Object.values(result)
-  
-    return reviews;
-};
+export const reviewServiceMaker = (token) => {
+    const request = requestMaker(token);
 
-export const getOne = async (reviewId) => {
-    const result = await request.get(`${baseUrl}/${reviewId}`);
+    const getAll = async () => {
+        const result = await request.get(baseUrl)
+        const reviews = Object.values(result)
 
-    return result;
-};
+        return reviews;
+    };
 
-export const create = async (reviewData) => {
-    const result = await request.post(baseUrl, reviewData);
+    const getOne = async (reviewId) => {
+        const result = await request.get(`${baseUrl}/${reviewId}`);
 
-    console.log(result);
+        return result;
+    };
 
-    return result;
-};
+    const create = async (reviewData) => {
+        const result = await request.post(baseUrl, reviewData);
 
-export const addComment = async (reviewId, data) => {
-    const result = await request.post(`${baseUrl}/${reviewId}/comments`, data);
+        console.log(result);
 
-    return result;
-};
+        return result;
+    };
+
+    const addComment = async (reviewId, data) => {
+        const result = await request.post(`${baseUrl}/${reviewId}/comments`, data);
+
+        return result;
+    };
+
+    const edit = (reviewId, data) => request.put(`${baseUrl}/${reviewId}`, data);
+
+    const deleteReview = (reviewId) => request.delete(`${baseUrl}/${reviewId}`);
+
+
+    return {
+        getAll,
+        getOne,
+        create,
+        edit,
+        addComment,
+        delete: deleteReview,
+    };
+}
