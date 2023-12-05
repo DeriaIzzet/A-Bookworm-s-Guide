@@ -1,6 +1,6 @@
 import {requestMaker} from './requester';
 
-const baseUrl = 'http://localhost:3030/jsonstore/reviews';
+const baseUrl = 'http://localhost:3030/data/reviews';
 
 export const reviewServiceMaker = (token) => {
     const request = requestMaker(token);
