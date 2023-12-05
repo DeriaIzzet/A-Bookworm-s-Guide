@@ -8,8 +8,9 @@ import {
 import "./App.css";
 
 import { reviewServiceMaker } from "./services/reviewService";
-import { authServiceMaker } from "./services/authService";
+ import { authServiceMaker } from "./services/authService";
 import { AuthContext } from "./contexts/AuthContext";
+import { useService } from "./hooks/useService";
 
 import Footer from "./components/footer/Footer";
 import Topbar from "./components/topbar/Topbar";
@@ -21,13 +22,14 @@ import Write from "./pages/write/Write";
 import Catalog from "./pages/catalog/Catalog";
 import Details from "./components/details/Details";
 import NotFound from "./components/NotFound/NotFound";
+import Logout from "./pages/logout/Logout"
 
 function App() {
   const navigate = useNavigate();
   const [reviews, setReviews] = useState([]);
   const [auth, setAuth] = useState({});
   const reviewService = reviewServiceMaker(auth.accesToken);
-  const authService = authServiceMaker(auth.accesToken);
+   const authService = authServiceMaker(auth.accesToken);
 
   useEffect(() => {
     reviewService.getAll().then((result) => {
@@ -71,7 +73,7 @@ function App() {
 };
 
   const onLogout = async () => {
-    await authService.logout();
+    // await authService.logout();
 
     setAuth({});
   };
@@ -107,6 +109,7 @@ function App() {
             path="/create-review"
             element={<Write onCreateReviewSubmit={onCreateReviewSubmit} />}
           />
+           <Route path="/logout" element={<Logout/>} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/catalog/:reviewId" element={<Details />} />
           <Route path="*" element={<NotFound />} />
