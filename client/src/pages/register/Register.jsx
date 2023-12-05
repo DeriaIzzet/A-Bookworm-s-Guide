@@ -6,9 +6,10 @@ import { useForm } from "../../hooks/useForm";
 import { AuthContext } from "../../contexts/AuthContext";
 
 const RegisterFormKeys = {
-  Email: 'email',
-  Password: 'password',
-  Username: 'username'
+  Email: "email",
+  Password: "password",
+  Username: "username",
+  ConfirmPassword: "confirmPassword",
 };
 export default function Register() {
   const { onRegisterSubmit } = useContext(AuthContext);
@@ -17,12 +18,14 @@ export default function Register() {
       [RegisterFormKeys.Username]: "",
       [RegisterFormKeys.Email]: "",
       [RegisterFormKeys.Password]: "",
-    },onRegisterSubmit
+      [RegisterFormKeys.ConfirmPassword]: "",
+    },
+    onRegisterSubmit
   );
   return (
     <div className="register">
       <span className="registerTitle">Register</span>
-      <form className="registerForm">
+      <form className="registerForm" method="POST" onSubmit={onSubmit}>
         <label>Username</label>
         <input
           className="registerInput"
@@ -45,7 +48,7 @@ export default function Register() {
           value={values[RegisterFormKeys.Email]}
           onChange={changeHandler}
         />
-        <label>Password</label>
+        <label>Password:</label>
         <input
           className="registerInput"
           type="password"
@@ -54,6 +57,17 @@ export default function Register() {
           placeholder="Enter password ..."
           name={RegisterFormKeys.Password}
           value={values[RegisterFormKeys.Password]}
+          onChange={changeHandler}
+        />
+        <label>Confirm Password:</label>
+        <input
+          className="registerInput"
+          type="password"
+          id="confirmPassword"
+          autoComplete="current-password"
+          placeholder="Enter password ..."
+          name={RegisterFormKeys.ConfirmPassword}
+          value={values[RegisterFormKeys.ConfirmPassword]}
           onChange={changeHandler}
         />
         <button className="registerButton">Register</button>
