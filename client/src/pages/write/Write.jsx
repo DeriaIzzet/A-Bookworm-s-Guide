@@ -1,5 +1,4 @@
 import "./Write.css";
-import { useState } from "react";
 import { useForm } from "../../hooks/useForm";
 
 export default function Write({ onCreateReviewSubmit }) {
@@ -19,7 +18,7 @@ export default function Write({ onCreateReviewSubmit }) {
     <div className="write-body">
       <h1 className="header-h1">Create Review</h1>
       <div className="writePage-div">
-        <form id="create" method="POST" onSubmit={onSubmit}>
+        <form id="create" method="post" onSubmit={onSubmit}>
           <div className="write">
             <div>
               <label htmlFor="title">Book Title:</label>

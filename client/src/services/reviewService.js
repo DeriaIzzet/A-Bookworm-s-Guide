@@ -20,9 +20,6 @@ export const reviewServiceMaker = (token) => {
 
     const create = async (reviewData) => {
         const result = await request.post(baseUrl, reviewData);
-
-        console.log(result);
-
         return result;
     };
 

@@ -10,7 +10,6 @@ import "./App.css";
 import { reviewServiceMaker } from "./services/reviewService";
  import { authServiceMaker } from "./services/authService";
 import { AuthContext } from "./contexts/AuthContext";
-import { useService } from "./hooks/useService";
 
 import Footer from "./components/footer/Footer";
 import Topbar from "./components/topbar/Topbar";
@@ -21,25 +20,26 @@ import Settings from "./pages/settings/Settings";
 import Write from "./pages/write/Write";
 import Catalog from "./pages/catalog/Catalog";
 import Details from "./components/details/Details";
-import NotFound from "./components/NotFound/NotFound";
+import NotFound from "./pages/NotFound/NotFound";
 import Logout from "./pages/logout/Logout"
 
 function App() {
   const navigate = useNavigate();
   const [reviews, setReviews] = useState([]);
   const [auth, setAuth] = useState({});
-  const reviewService = reviewServiceMaker(auth.accesToken);
-   const authService = authServiceMaker(auth.accesToken);
+  const reviewService = reviewServiceMaker(auth.accessToken);
+   const authService = authServiceMaker(auth.accessToken);
 
   useEffect(() => {
-    reviewService.getAll().then((result) => {
+    reviewService.getAll()
+    .then((result) => {
       setReviews(result);
     });
   }, []);
 
   const onCreateReviewSubmit = async (data) => {
     const newReview = await reviewService.create(data);
-    setReviews((state) => [...state, newReview]);
+    setReviews(state => [...state, newReview]);
     navigate("/catalog");
   };
 
@@ -73,18 +73,18 @@ function App() {
 };
 
   const onLogout = async () => {
-    // await authService.logout();
+     await authService.logout();
 
     setAuth({});
   };
 
-  const onGameEditSubmit = async (values) => {
-    const result = await gameService.edit(values._id, values);
+  // const onGameEditSubmit = async (values) => {
+  //   const result = await gameService.edit(values._id, values);
 
-    setGames((state) => state.map((x) => (x._id === values._id ? result : x)));
+  //   setGames((state) => state.map((x) => (x._id === values._id ? result : x)));
 
-    navigate(`/catalog/${values._id}`);
-  };
+  //   navigate(`/catalog/${values._id}`);
+  // };
   const contextVal = {
     onLoginSubmit,
     onRegisterSubmit,

@@ -24,8 +24,8 @@ export default function Register() {
   );
   return (
     <div className="register">
-      <span className="registerTitle">Register</span>
       <form className="registerForm" method="POST" onSubmit={onSubmit}>
+      <span className="registerTitle">Register</span>
         <label>Username</label>
         <input
           className="registerInput"
@@ -72,9 +72,11 @@ export default function Register() {
         />
         <button className="registerButton">Register</button>
       </form>
+      <p className="field">
       <span className="registerLoginButton">
-        Already have profile? You can <Link to="/login">Login</Link> here.
+        Already have profile? You can <Link to="/login"> Login </Link> here.
       </span>
+      </p>
     </div>
   );
 }

@@ -2,7 +2,7 @@ import "./SinglePost.css"
 import { Link } from "react-router-dom";
 
 export default function SinglePost({
-  _id,bookTitle, imageUrl,bookGenre ,bookRating
+  _id,bookTitle, imageUrl,bookGenre ,bookRating,
 }) {
   return (
     <div className="review-container">

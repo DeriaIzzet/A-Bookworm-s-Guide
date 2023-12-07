@@ -21,7 +21,7 @@ export default function Login ()  {
   return (
       <section id="login-page" className="login">
           <form id="login" method="POST" onSubmit={onSubmit}>
-              <div className="login">
+              <div className="login-div">
                   
                   <h1>Login</h1>
                   
@@ -46,7 +46,7 @@ export default function Login ()  {
                       value={values[LoginFormKeys.Password]}
                       onChange={changeHandler}
                   />
-                  <input type="submit" className="btn submit" value="Login" />
+                  <input type="submit" className="btn-submit" value="Login" />
                   <p className="field">
                       <span className="loginRegisterButton" >Don't have proile?  You can  <Link to="/register"> Register </Link> here. </span>
                   </p>

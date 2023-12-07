@@ -44,11 +44,11 @@ label {
   margin-bottom: 15px;
 }
 
-img {
+/* img {
   width: 328px;
   height: 500 px;
   border-radius: 8px;
-}
+} */
 
 .delete-btn .edit-btn {
   display: inline-block;
@@ -70,9 +70,21 @@ p {
   font-size: 20px;
   text-decoration: none;
   border-radius: 5px;
+  border: 10px;
   color: white;
   font-family: 'Times New Roman', serif;
 }
+ .buttons button {
+  background-color: #8a7c35;
+  padding: 15px 20px;
+  font-size: 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  color: white;
+  border: none;
+  font-family: 'Times New Roman', serif;
+} 
+
 .buttons {
   display: flex;
   justify-content: space-evenly;
@@ -81,4 +93,40 @@ p {
 
 .buttons a:hover {
   background-color:   #574e20;
+}
+
+.delete-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  text-align: center;
+}
+
+.delete-modal p {
+  margin-bottom: 20px;
+}
+
+.confirm-delete-btn,
+.cancel-delete-btn {
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.confirm-delete-btn {
+  background-color: #ff3b3b;
+  color: white;
+  border: none;
+}
+
+.cancel-delete-btn {
+  background-color: #ccc;
+  color: #333;
+  border: none;
 }

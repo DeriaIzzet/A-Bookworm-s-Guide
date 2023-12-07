@@ -4,7 +4,7 @@ import pictureHeader from "../../../public/cool-writing.jpeg"
 
 
 export default function Catalog({
-  reviews
+  reviews,
 }) {
   return (
     <section className="catalog-section">
