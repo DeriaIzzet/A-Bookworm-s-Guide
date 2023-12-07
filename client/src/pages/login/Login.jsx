@@ -20,7 +20,7 @@ export default function Login ()  {
 
   return (
       <section id="login-page" className="login">
-          <form id="login" method="POST" onSubmit={onSubmit}>
+          <form className="loginForm" method="POST" onSubmit={onSubmit}>
               <div className="login-div">
                   
                   <h1>Login</h1>
