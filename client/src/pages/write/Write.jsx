@@ -18,7 +18,7 @@ export default function Write({ onCreateReviewSubmit }) {
     <div className="write-body">
       <h1 className="header-h1">Create Review</h1>
       <div className="writePage-div">
-        <form id="create" method="post" onSubmit={onSubmit}>
+        <form className="createWrite" method="post" onSubmit={onSubmit}>
           <div className="write">
             <div>
               <label htmlFor="title">Book Title:</label>
@@ -42,7 +42,7 @@ export default function Write({ onCreateReviewSubmit }) {
                 placeholder="Enter book author..."
               />
             </div>
-            <div>
+            <div className="writeReview">
               <label htmlFor="review">Book Review:</label>
               <textarea
                 value={values.bookReview}
@@ -86,7 +86,7 @@ export default function Write({ onCreateReviewSubmit }) {
                 max="5"
               />
             </div>
-            <button type="submit">Submit</button>
+            <button className="btnSubmit" type="submit">Submit</button>
           </div>
         </form>
       </div>
