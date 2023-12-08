@@ -17,6 +17,7 @@ export default function Sidebar() {
           forum is your haven. Share your favorite books, discover hidden gems,
           and connect with fellow bookworms who share your passion.
         </p>
+
       </div>
       <div className="sidebarItem">
         <span className="sidebarTitle">GENRES</span>
@@ -26,7 +27,17 @@ export default function Sidebar() {
           <li className="sidebarListItem">Romance</li>
           <li className="sidebarListItem">Fantasy</li>
           <li className="sidebarListItem">Fiction</li>
-          <li className="sidebarListItem">Historical</li>
+          <li className="sidebarListItem">Dystopian</li>
+            <li className="sidebarListItem">Mystery</li>
+
+          <li className="sidebarListItem">Travel</li>
+          <li className="sidebarListItem">LGBTQ+</li>
+          <li className="sidebarListItem">Short Story</li>
+          <li className="sidebarListItem">Children’s</li>
+          <li className="sidebarListItem">Biography</li>
+          <li className="sidebarListItem">Self-help</li>
+          <li className="sidebarListItem">True Crime</li>
+          <li className="sidebarListItem">Humor</li>
         </ul>
       </div>
       <div className="sidebarItem">
