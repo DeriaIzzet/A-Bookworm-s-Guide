@@ -1,0 +1,89 @@
+
+.editBackground{
+    font-family: 'Arial', sans-serif; 
+    background-image: url("../../../public/books.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+    
+  
+  .edit{
+    text-align: center;
+  }
+  .headerEdit {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: rgb(240, 233, 233);
+   
+  }
+  .editDiv{
+    padding-bottom: 40px;
+  }
+  
+  .editForm {
+    max-width: 400px;
+    margin: 0px auto;
+    padding: 20px;
+    padding-bottom: 20px;
+    padding-right: 40px;
+    background-color: #553939;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .edit label {
+    display: block;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    color: rgb(237, 203, 203);
+  }
+  
+   .edit input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #d9d7d7;
+    border-radius: 5px;
+    font-size: 16px;
+    height: 20px;
+  }
+/*   
+     select {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+  }   */
+  
+  .editReview textarea{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #753e3e;
+    border-radius: 5px;
+    font-size: 16px;
+    height: 150px;
+  }
+  
+  
+  .submitButton {
+    width: 100%;
+    padding: 10px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(200, 171, 171);
+    color: rgb(10, 9, 9);
+    cursor: pointer;  
+    font-size: 18px;
+    transition: background-color 0.3s;
+  }
+  
+  .submitButton:hover {
+    background-color: #45a049;
+    background-image: url("")
+  }
+   
