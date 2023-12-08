@@ -22,6 +22,7 @@ import Catalog from "./pages/catalog/Catalog";
 import Details from "./components/details/Details";
 import NotFound from "./pages/NotFound/NotFound";
 import Logout from "./pages/logout/Logout"
+import Edit from "./components/edit/Edit";
 
 function App() {
   const navigate = useNavigate();
@@ -112,6 +113,7 @@ function App() {
            <Route path="/logout" element={<Logout/>} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/catalog/:reviewId" element={<Details />} />
+          <Route path="/catalog/:reviewId/edit" element={<Edit />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
 
