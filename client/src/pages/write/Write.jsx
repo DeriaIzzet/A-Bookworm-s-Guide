@@ -16,7 +16,7 @@ export default function Write({ onCreateReviewSubmit }) {
 
   return (
     <div className="write-body">
-      <h1 className="header-h1">Create Review</h1>
+      <h2 className="header-h1">Create Review</h2>
       <div className="writePage-div">
         <form className="createWrite" method="post" onSubmit={onSubmit}>
           <div className="write">

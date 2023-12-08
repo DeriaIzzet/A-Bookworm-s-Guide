@@ -3,9 +3,9 @@
   background-color: #f4f4f4;
   background-image: url("books.jpeg");
   background-repeat: no-repeat;
-  background-size: 1900px 936px;
-
+  background-size: cover;
 }
+  
 
 .write{
   text-align: center;
@@ -25,6 +25,7 @@
   max-width: 400px;
   margin: 0px auto;
   padding: 20px;
+  padding-bottom: 20px;
   padding-right: 40px;
   background-color: #553939;
   border-radius: 8px;
@@ -38,8 +39,8 @@
   color: rgb(237, 203, 203);
 }
 
- #create input {
-  width: 90%;
+ .write input {
+  width: 100%;
   padding: 10px;
   margin-bottom: 15px;
   border: 1px solid #d9d7d7;
@@ -48,14 +49,14 @@
   height: 20px;
 }
 
-/* #create select {
+  /* select {
   width: 95%;
   padding: 10px;
   margin-bottom: 15px;
   border: 1px solid #ddd;
   border-radius: 5px;
   font-size: 16px;
-} */
+}  */
 
 .writeReview textarea{
   width: 100%;
@@ -64,7 +65,7 @@
   border: 1px solid #753e3e;
   border-radius: 5px;
   font-size: 16px;
-  height: 200px;
+  height: 150px;
 }
 
 
