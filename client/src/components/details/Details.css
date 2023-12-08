@@ -13,12 +13,12 @@ body {
   margin: 50px auto;
 }
 
-h6 {
+.review-detail-container h6 {
   color: #333;
   font-size: 25px;
 }
 
-.review-details-div {
+.reviewDetailsDiv {
   height: auto;
   width: 1500px;
   overflow: hidden;
@@ -33,7 +33,7 @@ h6 {
   margin-bottom: 15px;
 }
 
-label {
+.details-item label {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
@@ -44,11 +44,11 @@ label {
   margin-bottom: 15px;
 }
 
-/* img {
+ .details-item img {
   width: 328px;
   height: 500 px;
   border-radius: 8px;
-} */
+} 
 
 .delete-btn .edit-btn {
   display: inline-block;
@@ -59,7 +59,7 @@ label {
   border-radius: 5px;
   transition: background-color 0.3s;
 }
-p {
+.details-item p {
   font-family: 'Times New Roman', serif;
   font-size: 20px;
 }

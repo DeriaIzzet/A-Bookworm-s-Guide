@@ -1,4 +1,4 @@
-import { useParams ,useNavigate} from "react-router-dom";
+import { useParams ,useNavigate,Link} from "react-router-dom";
 import { useEffect, useState ,useContext} from "react";
 import { useService } from '../../hooks/useService'
 
@@ -33,7 +33,7 @@ const navigate = useNavigate()
   return (
     <div className="review-detail-container">
       <h6> Book Details </h6>
-      <div className="review-details-div">
+      <div className="reviewDetailsDiv">
         <div className="details-item">
           <p className="details-content" id="title">
             {review.bookTitle}
@@ -77,9 +77,9 @@ const navigate = useNavigate()
               Delete
             </button>
 
-            <a href="/details" className="edit-btn">
+            <Link to={`/catalog/${review._id}/edit`} className="edit-btn">
               Edit
-            </a>
+            </Link>
           </div>
         )}
 
