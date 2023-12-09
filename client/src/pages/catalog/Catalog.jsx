@@ -23,6 +23,7 @@ export default function Catalog({
       <div className="no-reviews-div">
       {reviews.length === 0 && ( <h6 className="no-reviews">No Reviews Yet</h6> ) }
       </div>
+      
     </section>
   );
 }

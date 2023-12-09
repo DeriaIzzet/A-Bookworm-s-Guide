@@ -1,5 +1,6 @@
 import "./NotFound.css";
 import notFound from "../../../public/opps not fond.jpg"
+
 export default function NotFound() {
   return (
     
@@ -9,6 +10,7 @@ export default function NotFound() {
         src={notFound}   
       />
         <a href="/"  className="not-found-button">Return to Home Page</a>  
+      
         </div>
         
   );

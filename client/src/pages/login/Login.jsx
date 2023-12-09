@@ -3,7 +3,6 @@ import { useAuthContext } from "../../contexts/AuthContext";
 import { useForm } from "../../hooks/useForm";
 import { Link } from "react-router-dom";
 
-
 const LoginFormKeys = {
   Email: 'email',
   Password: 'password'
@@ -51,6 +50,7 @@ export default function Login ()  {
                   </p>
               </div>
           </form>
+         
       </section>
   );
 }

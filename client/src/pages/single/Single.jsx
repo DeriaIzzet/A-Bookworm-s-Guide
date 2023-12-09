@@ -1,3 +1,4 @@
+
 import Sidebar from "../../components/sidebar/Sidebar";
 import SinglePost from "../../components/singlePost/SinglePost";
 import "./Single.css";
@@ -9,6 +10,7 @@ export default function Single() {
       <div>
         <Sidebar />
     </div>
+ 
     </div>
   );
 }

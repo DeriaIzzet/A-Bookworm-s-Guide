@@ -77,6 +77,7 @@ export default function Register() {
         Already have profile? You can <Link to="/login"> Login </Link> here.
       </span>
       </p>
+     
     </div>
   );
 }

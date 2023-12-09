@@ -10,12 +10,10 @@ export default function SinglePost({
   bookRating,
 }) {
   const { isAuthenticated } = useAuthContext();
-
   return (
     <div className="review-container">
       <div className="review-details">
         <div className="detail-item">
-        
           <div className="detail-item">
             <img
               className="detail-content"
@@ -24,7 +22,6 @@ export default function SinglePost({
               alt="Book Cover"
             />
           </div>
-        
           <p className="detail-content" id="title">
             {bookTitle}
           </p>
@@ -41,7 +38,6 @@ export default function SinglePost({
             Reader rated this, {bookRating}/5 stars!
           </p>
         </div>
-
         {isAuthenticated && (
           <div className="details-btn-div">
             <Link to={`/catalog/${_id}`} className="details-btn">

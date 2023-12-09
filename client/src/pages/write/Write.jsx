@@ -1,6 +1,7 @@
 import "./Write.css";
 import { useForm } from "../../hooks/useForm";
 
+
 export default function Write({ onCreateReviewSubmit }) {
   const { values, changeHandler, onSubmit } = useForm(
     {
@@ -90,6 +91,7 @@ export default function Write({ onCreateReviewSubmit }) {
           </div>
         </form>
       </div>
+  
     </div>
   );
 }

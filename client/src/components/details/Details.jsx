@@ -51,7 +51,7 @@ export default function Details() {
   };
 
   return (
-    <div className="review-detail-container">
+    <section className="review-detail-container">
       <h6> Book Details </h6>
       <div className="reviewDetailsDiv">
         <div className="details-item">
@@ -91,8 +91,6 @@ export default function Details() {
             Reader rated this, {review.bookRating}/5 stars!
           </p>
         </div>
-
-        
         {review._ownerId !== undefined && review._ownerId === userId && (
           <div className="buttons">
             <button
@@ -144,6 +142,7 @@ export default function Details() {
           </div>
         )}
       </div>
-    </div>
+      
+    </section>
   );
 }

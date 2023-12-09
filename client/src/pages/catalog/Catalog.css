@@ -18,11 +18,15 @@
     justify-content: space-evenly;
   }
   
+  .no-reviews-div {
+    background-size: cover;
+  }
   .no-reviews {
     margin-top: 20px;
     font-size: 170px;
     color: rgb(192, 146, 82);
     font-family: 'Times New Roman', serif;
+    background-size: cover;
   }
 
   .headerImg {
