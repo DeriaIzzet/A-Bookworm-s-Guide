@@ -19,38 +19,39 @@ import Write from "./pages/write/Write";
 import Catalog from "./pages/catalog/Catalog";
 import Details from "./components/details/Details";
 import NotFound from "./pages/NotFound/NotFound";
-import Logout from "./pages/logout/Logout"
+import Logout from "./pages/logout/Logout";
 import Edit from "./components/edit/Edit";
 import MyList from "./pages/myList/MyList";
+import RouteGuard from "./components/guard/RouteGuard";
 
 function App() {
   const navigate = useNavigate();
   const [reviews, setReviews] = useState([]);
-  
+
   const reviewService = reviewServiceMaker();
 
   useEffect(() => {
-    reviewService.getAll()
-    .then((result) => {
+    reviewService.getAll().then((result) => {
       setReviews(result);
     });
   }, []);
 
   const onCreateReviewSubmit = async (data) => {
     const newReview = await reviewService.create(data);
-    setReviews(state => [...state, newReview]);
+    setReviews((state) => [...state, newReview]);
     navigate("/catalog");
   };
-
 
   const OnEditSubmit = async (values) => {
     const result = await reviewService.edit(values._id, values);
 
-    setReviews((state) => state.map((x) => (x._id === values._id ? result : x)));
+    setReviews((state) =>
+      state.map((x) => (x._id === values._id ? result : x))
+    );
 
     navigate(`/catalog/${values._id}`);
   };
-  
+
   return (
     <AuthProvider>
       <div>
@@ -60,18 +61,29 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
           <Route path="/catalog" element={<Catalog reviews={reviews} />} />
-          <Route
-            path="/create-review"
-            element={<Write onCreateReviewSubmit={onCreateReviewSubmit} />}
-          />
-           <Route path="/logout" element={<Logout/>} />
-          <Route path="/settings" element={<MyList reviews={reviews}/>} />
-          <Route path="/catalog/:reviewId" element={<Details />} />
-          <Route path="/catalog/:reviewId/edit" element={<Edit  OnEditSubmit={OnEditSubmit}/>} />
+          <Route element={<RouteGuard />}>
+            <Route
+              path="/create-review"
+              element={<Write onCreateReviewSubmit={onCreateReviewSubmit} />}
+            />
+          </Route>
+          <Route path="/logout" element={<Logout />} />
+          <Route element={<RouteGuard />}>
+            <Route path="/settings" element={<MyList reviews={reviews} />} />
+          </Route>
+          <Route element={<RouteGuard />}>
+            <Route path="/catalog/:reviewId" element={<Details />} />
+          </Route>
+          <Route element={<RouteGuard />}>
+            <Route
+              path="/catalog/:reviewId/edit"
+              element={<Edit OnEditSubmit={OnEditSubmit} />}
+            />
+          </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
 
-        <Footer />
+       <Footer/>
       </div>
     </AuthProvider>
   );
