@@ -9,10 +9,12 @@ import * as commentService from "../../services/commentService";
 import { AddComment } from "./addComment/AddComment";
 import { reviewReducer } from "../../reducers/reviewReducer";
 import "./Details.css";
+import { useReviewContext } from "../../contexts/ReviewContext";
 
 export default function Details() {
   const { reviewId } = useParams();
   const { userId, isAuthenticated, userUsername } = useAuthContext();
+  const {deleteReview} = useReviewContext()
   const [review, dispatch] = useReducer(reviewReducer, {});
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const reviewService = useService(reviewServiceMaker);
@@ -44,6 +46,7 @@ export default function Details() {
 
   const onDelete = async () => {
     await reviewService.delete(review._id);
+    deleteReview(review._id)
 
     navigate("/");
     // Close the modal after deletion

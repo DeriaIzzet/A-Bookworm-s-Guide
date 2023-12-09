@@ -4,9 +4,11 @@ import "./Edit.css"
 import { useForm } from "../../hooks/useForm";
 import { useService } from "../../hooks/useService";
 import { reviewServiceMaker } from "../../services/reviewService";
+import { useReviewContext } from "../../contexts/ReviewContext";
 
 
-export default function Edit({ OnEditSubmit }) {
+export default function Edit() {
+  const { OnEditSubmit } = useReviewContext()
   const { reviewId } = useParams();
   const reviewService = useService(reviewServiceMaker);
   const { values, changeHandler, onSubmit, changeValues } = useForm(
