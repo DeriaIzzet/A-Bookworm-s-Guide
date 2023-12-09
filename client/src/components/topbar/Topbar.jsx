@@ -9,10 +9,7 @@ export default function Topbar() {
   return (
     <div className="top">
       <div className="topLeft">
-        <i className="topIcon fab fa-facebook-square"></i>
-        <i className="topIcon fab fa-instagram-square"></i>
-        <i className="topIcon fab fa-pinterest-square"></i>
-        <i className="topIcon fab fa-twitter-square"></i>
+        <a href="https://github.com/DeriaIzzet"><i className="topIcon fab fa-github-square"></i></a>
       </div>
       <div className="topCenter">
         <div className="noUser">
