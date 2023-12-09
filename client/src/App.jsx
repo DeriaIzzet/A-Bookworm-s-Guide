@@ -1,13 +1,13 @@
-import { useState, useEffect } from "react";
+
 import {
   BrowserRouter as Router,
   Route,
   Routes,
-  useNavigate,
+ 
 } from "react-router-dom";
 import "./App.css";
 
-import { reviewServiceMaker } from "./services/reviewService";
+
 import { AuthProvider } from "./contexts/AuthContext";
 import Footer from "./components/footer/Footer";
 import Topbar from "./components/topbar/Topbar";
@@ -23,68 +23,40 @@ import Logout from "./pages/logout/Logout";
 import Edit from "./components/edit/Edit";
 import MyList from "./pages/myList/MyList";
 import RouteGuard from "./components/guard/RouteGuard";
+import { ReviewProvider } from "./contexts/ReviewContext";
 
 function App() {
-  const navigate = useNavigate();
-  const [reviews, setReviews] = useState([]);
-
-  const reviewService = reviewServiceMaker();
-
-  useEffect(() => {
-    reviewService.getAll().then((result) => {
-      setReviews(result);
-    });
-  }, []);
-
-  const onCreateReviewSubmit = async (data) => {
-    const newReview = await reviewService.create(data);
-    setReviews((state) => [...state, newReview]);
-    navigate("/catalog");
-  };
-
-  const OnEditSubmit = async (values) => {
-    const result = await reviewService.edit(values._id, values);
-
-    setReviews((state) =>
-      state.map((x) => (x._id === values._id ? result : x))
-    );
-
-    navigate(`/catalog/${values._id}`);
-  };
 
   return (
     <AuthProvider>
+      <ReviewProvider>
       <div>
         <Topbar />
         <Routes>
-          <Route path="/" element={<Homepage reviews={reviews} />} />
+          <Route path="/" element={<Homepage  />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/catalog" element={<Catalog reviews={reviews} />} />
+          <Route path="/catalog" element={<Catalog  />} />
           <Route element={<RouteGuard />}>
+          <Route path="/logout" element={<Logout />} />
             <Route
               path="/create-review"
-              element={<Write onCreateReviewSubmit={onCreateReviewSubmit} />}
+              element={<Write />}
             />
-          </Route>
-          <Route path="/logout" element={<Logout />} />
-          <Route element={<RouteGuard />}>
-            <Route path="/settings" element={<MyList reviews={reviews} />} />
-          </Route>
-          <Route element={<RouteGuard />}>
             <Route path="/catalog/:reviewId" element={<Details />} />
-          </Route>
-          <Route element={<RouteGuard />}>
+            <Route path="/settings" element={<MyList  />} />
             <Route
               path="/catalog/:reviewId/edit"
-              element={<Edit OnEditSubmit={OnEditSubmit} />}
+              element={<Edit />}
             />
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
 
-       <Footer/>
+        <Footer />
       </div>
+      </ReviewProvider>
+      
     </AuthProvider>
   );
 }
