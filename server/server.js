@@ -1339,58 +1339,91 @@
     	}
     };
     var seedData = {
-    	recipes: {
-    		"3987279d-0ad4-4afb-8ca9-5b256ae3b298": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			name: "Easy Lasagna",
-    			img: "assets/lasagna.jpg",
-    			ingredients: [
-    				"1 tbsp Ingredient 1",
-    				"2 cups Ingredient 2",
-    				"500 g  Ingredient 3",
-    				"25 g Ingredient 4"
-    			],
-    			steps: [
-    				"Prepare ingredients",
-    				"Mix ingredients",
-    				"Cook until done"
-    			],
-    			_createdOn: 1613551279012
+    	reviews: {
+    		"a9ebadfc-570c-43fc-a1fb-935f1d421050": {
+                "bookTitle": "Let Us Descend",
+                "imageUrl": "https://d1ldy8a769gy68.cloudfront.net/300/978/198/210/449/8/9781982104498.jpg",
+                "Author": " JESMYN WARD",
+                "bookGenre": "Romance",
+                "bookReview": "Ward follows her award-winning Bois Sauvage trilogy (Where the Line Bleeds, 2008; Salvage the Bones, 2011; Sing, Unburied, Sing, 2017) by moving away from her native Mississippi and back in time to the rice fields of pre–Civil War North Carolina, where Annis, a bright young Black woman who has learned from her mother, enslaved like her, that the white man who owns her is also her father and his daughters (on whose school lessons about Aristotle and the social habits of bees she eavesdrops) are her sisters. Annis’ mother enhances the younger woman’s education with lessons in self-defense and survival tactics she carried with her from Africa, where, as she informs her daughter, her mother was a warrior queen. Annis will need all this inherited cunning and resilience after her “sire” sells her mother. Away from her chores, Annis finds solace from her lover, Safi, the bees carrying out their own chores in the nearby forest, and words from a poem about an “ancient Italian” descending into hell as intoned by her sisters’ tutor. After Safi flees the plantation, Annis and other slave women are herded like cattle and sent off on a long, grueling march further south. Along the way, Annis has her first encounter with a dynamic woman spirit bearing the name Mama Aza, an imperious and enigmatic guardian angel guiding and protecting Annis from the more malevolent spirits that endanger the women’s lives en route to the slave markets of New Orleans, which Annis likens to the “grief-racked city” of Dante’s poem. There’s little that Ward’s narrative contributes to the literature of American slavery in its basic historic details. But what gives this volume its stature and heft among other recent novels are the power, precision, and visionary flow of Ward’s writing, the way she makes the unimaginable horror, soul-crushing drudgery, and haphazard cruelties of the distant past vivid to her readers. Every time you think this novel is taking you places you’ve been before, Ward startles you with an image, a metaphor, a rhetorical surge that makes both Annis and her travails worth your attention. And admiration.",
+                "bookRating": "3.6",
+                "_id": "a9ebadfc-570c-43fc-a1fb-935f1d421050"
+    			
     		},
-    		"8f414b4f-ab39-4d36-bedb-2ad69da9c830": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			name: "Grilled Duck Fillet",
-    			img: "assets/roast.jpg",
-    			ingredients: [
-    				"500 g  Ingredient 1",
-    				"3 tbsp Ingredient 2",
-    				"2 cups Ingredient 3"
-    			],
-    			steps: [
-    				"Prepare ingredients",
-    				"Mix ingredients",
-    				"Cook until done"
-    			],
-    			_createdOn: 1613551344360
+            "7431d770-c3cc-4aea-baf5-a86dcd3a837d": {
+                "bookTitle": "Memoirs of a Geisha",
+                "imageUrl": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1409595968i/929.jpg",
+                "Author": "Arthur Golden",
+                "bookGenre": "Fiction",
+                "bookReview": "Memoirs of a Geisha is an American novel, and as such the attempt at West does East, especially on the complex and delicate subject of the geisha, is compelling, interesting, but also heavy-handed and ultimately ineffective (even more so in the case of the film). It is a wonderful introduction to geisha, Japanese culture, and the East for the uninitiated Western reader, and I can see why the book is popular, but I found it disappointing. For the reader already familiar with the culture, western influences are all too clear and the book comes off as a bit clunky and imperfect. I also had some problems with the general perception of the characters by readers versus the way the characters were actually portrayed in the book--Memoirs is far from the good-willed fairy tale that people assume it is. By all means, read it, but leave it open for critique and remember that a more authentic representation of eastern culture, especially in the details, will come from the east itself.A lot of my critique stems from the fact that this movie has attained such wide-spread fame and been made into a movie, to be sure. I feel like it is being perpetuated as something it is not. Even the introduction to the book (a faux translator's note) perpetuates the myth that Memoirs is an accurate, beautiful, in-depth reflection of the life of a geisha, when in truth it is no more that historical fiction and is written by an outsider. Golden has done his research and is well-educated on his subjects, and I have no problem with people reading from, taking interest in, and even learning from this book; I do, however, think it is important that readers don't conflate the American novel with Japanese reality. They aren't the same thing, no matter how much research Golden did, and if we take the book as an accurate representation we're actually underestimating and undervaluing geisha, Japan, and Japanese culture.",
+                "bookRating": "4.3",
+                "_id": "7431d770-c3cc-4aea-baf5-a86dcd3a837d"
+    			
     		},
-    		"985d9eab-ad2e-4622-a5c8-116261fb1fd2": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			name: "Roast Trout",
-    			img: "assets/fish.jpg",
-    			ingredients: [
-    				"4 cups Ingredient 1",
-    				"1 tbsp Ingredient 2",
-    				"1 tbsp Ingredient 3",
-    				"750 g  Ingredient 4",
-    				"25 g Ingredient 5"
-    			],
-    			steps: [
-    				"Prepare ingredients",
-    				"Mix ingredients",
-    				"Cook until done"
-    			],
-    			_createdOn: 1613551388703
-    		}
+    		"7a0152fa-86e7-4c92-8d18-e5b9182aa49f": {
+                "bookTitle": "THE TRIVIA MAN",
+                "imageUrl": "https://www.bookloverbookreviews.com/wp-content/uploads/2015/06/The-Trivia-Man-by-Deborah-OBrien-300x461.jpg?ezimgfmt=ngcb140/notWebP",
+                "Author": "Deborah OBrien",
+                "bookGenre": "Romance",
+                "bookReview": "Who isnt drawn to a story about people that walk to the beat of their own drum? Every one of us has at some time in our lives felt that we didn’t quite fit in with the crowd, or perhaps admired those that appeared quite happy not doing so.Kevin Dwyer, The Trivia Man, is a smart guy, but his lack of understanding of social norms has left him isolated within society.O’Brien’s use of a narrative that alternates between different character viewpoints provides valuable insight on the subtle nuances at play in even the most common place of situations. And most crucially, the potential minefield ‘what is often unsaid’ can present for those who process the world literally.What I particularly admired is that O’Brien did not feel the need to shout her message. The Trivia Man is very pleasant read, slow burning and almost quiet, but its depth of meaning creeps up on you. Through entertaining dialogue during the weekly trivia competitions she develops her eclectic ensemble cast, slowly but surely stripping back layers.",
+                "bookRating": "4",
+                "_id": "7a0152fa-86e7-4c92-8d18-e5b9182aa49f"
+    			
+    		},
+            "b04e3f04-b610-43d4-a565-c651bc9b08e0": {
+                "bookTitle": "Water for Elephants",
+                "imageUrl": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1667708346i/43641.jpg",
+                "Author": "Sara Gruen",
+                "bookGenre": "Romance",
+                "bookReview": "There is unkindness aplenty under the big top. An evil owner, Uncle Al, Blackie the enforcer, August, the mood-challenged and abusive supervisor of animals, and husband of Marlena, who performs with horses, and with whom Jacob is smitten. But for every cruelty there is kindness. Jacob is helped by the elderly alcoholic, Camel, when he is newly on the bum and Jacob later returns the favor. A grumpy dwarf named Walter shows a kinder side, in time.What is real and what is an illusion? Gruen offers us a major sleight of hand that I will not write of here. But there are sundry references throughout the book. A circus, per se, is involved in the business of illusion. There is a wonderful image here of a hippo being paraded through town, even though it has already gone to meet its maker. Some relationships in the story are based on illusion as well.But the core items here are Jacob’s love for the married Marlena, and the behavior of a newly acquired elephant, who may not be as dumb as she at first appears. While both tales are engaging, I did find the pacing to be somewhat slow. Thankfully, this is a very fast read. I know, that sounds contradictory, but one can flip through the pages quickly while waiting for something to happen. Gruen does a nice job of making her characters real, a wonderful gift",
+                "bookRating": "5",
+                "_id": "b04e3f04-b610-43d4-a565-c651bc9b08e0"
+            },
+            "959a5f45-9134-4a73-ad5b-415fd76a12c3": {
+                "bookTitle": "The Hunger Games",
+                "imageUrl": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1586722975i/2767052.jpg",
+                "Author": "Suzanne Collins",
+                "bookGenre": "Fiction",
+                "bookReview": "In a post-apocalyptic future, life has turned extremely hard. Fighting poverty and hunger every day, sixteen years old hunter Katniss does absolutely everything in her power to have enough for her defenseless little sister, and a barely lucid mother. Life is hard, yet not impossible, until the one fateful day arrives. Once every year, the ever vigilant all powerful Capitol of Panem celebrates for their entertainment the “Hunger Games”, a yearly tournament where a handful representatives of each district are forced to fight in a massive arena, to the death. In a sad turn of events, young Katniss will have to fight not only for herself, but for the future of her starving family.I think this series needs as much introduction as Lord of the Rings; but what the hey, old habits die hard. Maybe not everyone has read it, maybe not everyone has watched it, but doubt anyone has never heard of it at some point. One of the greatest dystopian fiction of all time, or at least one of the best-selling ones. A literature masterpiece? Hardly. One of the most entertaining ever? Quite possibly! Astounding world building and character development. Not a profound reading at all, but a plot perfectly balanced, fast paced and action packed; if you can withstand YA that is, and the triangle thingy. Along with Percy Jackson and Divergent, one of the pillar series that sparked my literary addiction. Highly Recommendable.",
+                "bookRating": "5",
+                "_id": "959a5f45-9134-4a73-ad5b-415fd76a12c3"
+            },
+            "df8a1485-c36e-4753-b4b6-97c5a14b1df4": {
+                "bookTitle": "Harry Potter and the Order of the Phoenix",
+                "imageUrl": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1546910265i/2.jpg",
+                "Author": "J.K. Rowling",
+                "bookGenre": "Fiction",
+                "bookReview": "J.K. Rowling really nails down her tonal shifts in this book. The darker tone really takes this series to the next level in terms of plot AND character work. Order of the Pheonix is so dark and yet so hopeful. It's about resisting oppression in any way you can and it's just a perfect fucking book god I love this book so muchThe plotting is brilliant, incorporating one of the most terrifying villains I have ever read about in my entire life. She's so human and that's what makes her such a terrifying character. Also, the plot reveals at the end. The interesting twist on the chosen one trope in regards to Neville.The side characters and the entire concept of the DA and their bonding as a team really stand out here. There's something incredibly powerful in Harry Potter, who has worked alone the last few books, needing to ask for help. Harry realizes that he doesn't have to be alone. This book also deals with the fact that adults aren't perfect, even when they love you and want to help you. Also, Ginny Weasley is fucking perfect. Why do all of you sleep on her verbal DRAG of Harry? “I forgo–” “LUCKY YOU”This book is also undoubtedly the funniest of the series. Fred and George. The school resistance to Umbridge. I don't know, maybe Lord Voldemort? IT UNSCREWS THE OTHER WAY.This book is just fucking perfect. My mother is giving me annoyed looks while reading this review on her goodreads app but I don't care, this book is perfect.",
+                "bookRating": "5",
+                "_id": "df8a1485-c36e-4753-b4b6-97c5a14b1df4"
+            },
+            "edb42d5d-894e-4a95-91a8-64448d787d8d": {
+                "bookTitle": "To Kill a Mockingbird",
+                "imageUrl": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1553383690i/2657.jpg",
+                "Author": "Harper Lee",
+                "bookGenre": "Fiction",
+                "bookReview": "Why is it when I pick up To Kill A Mockingbird , I am instantly visited by a sensory memory: I’m walking home, leaves litter the ground, crunching under my feet. I smell the smoke of fireplaces and think about hot cider and the wind catches and my breath is taken from me and I bundle my coat tighter against me and lift my head to the sky, no clouds, just a stunning blue that hurts my eyes, another deep breath and I have this feeling that all is okay.Why? Why this memory? I mean, this takes place in Alabama and mostly in the summer, well there is that one climatic scene on Halloween, but I bet it’s still hot enough to melt the balls off a brass monkey.It must be the school thing, my daughter just finished reading it, prompting me to give it another go, to fall back into Scout’s world and pretend to be eight and let life simply be.How is that? How can life for Scout be simple? I mean, she lives in the south, during the depression, she has to deal with ignorant schoolteachers and town folk, her ideas of what is right, what is what it should be are laughed at by her schoolmates… man, and I thought my childhood was rough.Still, she lives in this idyllic town, I mean, except for the racism and the creepy neighbors and the whole fact that it’s, you know, the south…(forgive me… I’m not immune to the downfalls of the north, I mean, we had witches and well, Ted Bundy was born here…) But, there’s this sense of childlike innocence to this book that makes me believe in humanity… even in the throes of evil. What am I saying here? I guess, that this is a good pick me up.",
+                "bookRating": "5",
+                "_id": "edb42d5d-894e-4a95-91a8-64448d787d8d"
+            },
+            "f53e6107-9456-4a3a-a4dc-87696dcc34d5": {
+                "bookTitle": "Animal Farm",
+                "imageUrl": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1325861570i/170448.jpg",
+                "Author": "George Orwell, Russell Baker",
+                "bookGenre": "Fiction",
+                "bookReview": "This is a book I've been meaning to read for ages but never got around to - last week I not only read it but gave a lesson on the historical context for the grade 8 class, who will be reading this book and The Wave. As I found, out of the class of 24, about 20 of them had already read the book, and at least one kid knew it was an allegory of the Russian Revolution. Still, my lesson wasn't totally redundant.For anyone who isn't familiar with the story, Animal Farm is about the animals on a farm in England rising up against the incompetent, cruel farmer (Mr Jones, who represents the deposed Tsar, Nicholas II) and taking over the farm, renaming it Animal Farm (USSR) and - so the glorious vision intended - running it for themselves, so their lives would be better.",
+                "bookRating": "5",
+                "_id": "f53e6107-9456-4a3a-a4dc-87696dcc34d5"
+            },
+            "c903cd0f-1c7c-4e4b-9ee9-05800c98ae58": {
+                "bookTitle": "The Chronicles of Narnia",
+                "imageUrl": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1661032875i/11127.jpg",
+                "Author": "C.S. Lewis, Pauline Baynes",
+                "bookGenre": "Fantasy",
+                "bookReview": "The Chronicles of Narnia is a series of seven fantasy novels by C. S. Lewis.It is considered a classic of children's literature and is the author's best-known work, having sold over 100 million copies in 47 languages.Written by Lewis, illustrated by Pauline Baynes, and originally published in London between 1950 and 1956, The Chronicles of Narnia has been adapted several times, complete or in part, for radio, television, the stage, and film.Set in the fictional realm of Narnia, a fantasy world of magic, mythical beasts, and talking animals, the series narrates the adventures of various children who play central roles in the unfolding history of that world.Except in The Horse and His Boy, the protagonists are all children from the real world, magically transported to Narnia, where they are called upon by the lion Aslan to protect Narnia from evil and restore the throne to its rightful line.The books span the entire history of Narnia, from its creation in The Magician's Nephew to its eventual destruction in The Last Battle.",
+                "bookRating": "5",
+                "_id": "c903cd0f-1c7c-4e4b-9ee9-05800c98ae58"
+            }
     	},
     	comments: {
     		"0a272c58-b7ea-4e09-a000-7ec988248f66": {
