@@ -106,3 +106,9 @@
   color: rgb(12, 11, 11);
   border-radius: 40px;
 }
+
+.error-message {
+  color: #ff0000; /* Red color for error messages */
+  font-size: 14px;
+  margin-top: 5px;
+}
