@@ -28,7 +28,7 @@ export default function Topbar() {
               <div className="profile">
                 <img
                   className="topImg"
-                  src="https://images.pexels.com/photos/1858175/pexels-photo-1858175.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                  src="https://images.pexels.com/photos/762685/pexels-photo-762685.jpeg?auto=compress&cs=tinysrgb&w=600"
                   alt=""
                   />
                   <span>{userUsername}</span>
