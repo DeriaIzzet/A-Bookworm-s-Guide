@@ -10,6 +10,7 @@ export default function Edit({ OnEditSubmit }) {
   const reviewService = useService(reviewServiceMaker);
   const { values, changeHandler, onSubmit, changeValues } = useForm(
     {
+      _id: "",
       bookTitle: "",
       imageUrl: "",
       author: "",
@@ -25,7 +26,7 @@ export default function Edit({ OnEditSubmit }) {
     .then((result) => {
       changeValues(result);
     });
-  }, []);
+  }, [reviewId]);
   return (
     <section className="editBackground">
       <h1 className="headerEdit">Edit Review</h1>
