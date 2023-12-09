@@ -1,6 +1,6 @@
-import SinglePost from "../../components/singlePost/SinglePost";
 import './Catalog.css'
 import pictureHeader from "../../../public/cool-writing.jpeg"
+import SinglePost from "../../components/singlePost/SinglePost";
 
 
 export default function Catalog({
