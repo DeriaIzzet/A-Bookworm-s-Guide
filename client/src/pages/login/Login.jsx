@@ -12,6 +12,7 @@ const LoginFormKeys = {
 
 export default function Login ()  {
     const { onLoginSubmit } = useAuthContext();
+    const {error} = useAuthContext()
     const [errors, setErrors] = useState({
       [LoginFormKeys.Email]: "",
       [LoginFormKeys.Password]: "",
@@ -85,7 +86,8 @@ export default function Login ()  {
               onChange={changeHandlerWithValidation}
             />
             <div className="error-message">{errors[LoginFormKeys.Password]}</div>
-  
+            
+            {error && <div className="error-message">{error}</div>} 
             <input type="submit" className="btn-submit" value="Login" />
   
             <p className="field">

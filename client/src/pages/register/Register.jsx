@@ -1,7 +1,7 @@
 import "./Register.css";
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import { AuthContext } from "../../contexts/AuthContext";
+import {  useAuthContext } from "../../contexts/AuthContext";
 import { useForm } from "../../hooks/useForm";
 
 const RegisterFormKeys = {
@@ -13,9 +13,10 @@ const RegisterFormKeys = {
 
 
 export default function Register() {
-  const { onRegisterSubmit } = useContext(AuthContext);
-
+  const { onRegisterSubmit } = useAuthContext()
+  const {error} = useAuthContext()
   const [errors, setErrors] = useState({
+    [RegisterFormKeys.Username]: "",
     [RegisterFormKeys.Email]: "",
     [RegisterFormKeys.Password]: "",
     [RegisterFormKeys.ConfirmPassword]: "",
@@ -29,7 +30,6 @@ export default function Register() {
       [RegisterFormKeys.ConfirmPassword]: "",
     },
     () => {
-      // You can perform additional actions on successful form submission
       onRegisterSubmit(values);
     }
   );
@@ -90,7 +90,7 @@ export default function Register() {
           autoComplete="username"
           name={RegisterFormKeys.Username}
           value={values[RegisterFormKeys.Username]}
-          onChange={changeHandlerWithValidation}
+          onChange={changeHandler}
         />
         <div className="error-message">{errors[RegisterFormKeys.Username]}</div>
 
@@ -132,19 +132,21 @@ export default function Register() {
           onChange={changeHandlerWithValidation}
         />
         <div className="error-message">{errors[RegisterFormKeys.ConfirmPassword]}</div>
+        {error && <div className="error-message">{error}</div>} {/* Display error in the UI */}
 
-        <button className="registerButton" disabled={hasErrors()}>
-          Register
-        </button>
-      </form>
-      <p className="field">
-        <span className="registerLoginButton">
-          Already have a profile? You can <Link to="/login"> Login </Link> here.
-        </span>
-      </p>
-    </div>
-  );
-};
+<button className="registerButton" disabled={hasErrors()}>
+  Register
+</button>
+</form>
+
+<p className="field">
+<span className="registerLoginButton">
+  Already have a profile? You can <Link to="/login"> Login </Link> here.
+</span>
+</p>
+</div>
+);
+}
 
 
 
