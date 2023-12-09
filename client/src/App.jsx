@@ -8,9 +8,7 @@ import {
 import "./App.css";
 
 import { reviewServiceMaker } from "./services/reviewService";
- import { authServiceMaker } from "./services/authService";
-import { AuthContext } from "./contexts/AuthContext";
-
+import { AuthProvider } from "./contexts/AuthContext";
 import Footer from "./components/footer/Footer";
 import Topbar from "./components/topbar/Topbar";
 import Homepage from "./pages/homepage/Homepage";
@@ -27,9 +25,8 @@ import Edit from "./components/edit/Edit";
 function App() {
   const navigate = useNavigate();
   const [reviews, setReviews] = useState([]);
-  const [auth, setAuth] = useState({});
-  const reviewService = reviewServiceMaker(auth.accessToken);
-   const authService = authServiceMaker(auth.accessToken);
+  
+  const reviewService = reviewServiceMaker();
 
   useEffect(() => {
     reviewService.getAll()
@@ -44,63 +41,19 @@ function App() {
     navigate("/catalog");
   };
 
-  const onLoginSubmit = async (data) => {
-    try {
-      const result = await authService.login(data);
 
-      setAuth(result);
+  const OnEditSubmit = async (values) => {
+    const result = await reviewService.edit(values._id, values);
 
-      navigate("/");
-    } catch (error) {
-      console.log("There is a problem");
-    }
+    setReviews((state) => state.map((x) => (x._id === values._id ? result : x)));
+
+    navigate(`/catalog/${values._id}`);
   };
-
-  const onRegisterSubmit = async (values) => {
-    const { confirmPassword, ...registerData } = values;
-    if (confirmPassword !== registerData.password) {
-        return;
-    }
-
-    try {
-        const result = await authService.register(registerData);
-
-        setAuth(result);
-
-        navigate('/');
-    } catch (error) {
-        console.log('There is a problem');
-    }
-};
-
-  const onLogout = async () => {
-     await authService.logout();
-
-    setAuth({});
-  };
-
-  // const onGameEditSubmit = async (values) => {
-  //   const result = await gameService.edit(values._id, values);
-
-  //   setGames((state) => state.map((x) => (x._id === values._id ? result : x)));
-
-  //   navigate(`/catalog/${values._id}`);
-  // };
-  const contextVal = {
-    onLoginSubmit,
-    onRegisterSubmit,
-    onLogout,
-    userId: auth._id,
-    token: auth.accessToken,
-    userEmail: auth.email,
-    userUsername: auth.username,
-    isAuthenticated: !!auth.accessToken,
-  };
+  
   return (
-    <AuthContext.Provider value={contextVal}>
-      <div id="book">
+    <AuthProvider>
+      <div>
         <Topbar />
-
         <Routes>
           <Route path="/" element={<Homepage reviews={reviews} />} />
           <Route path="/register" element={<Register />} />
@@ -111,16 +64,15 @@ function App() {
             element={<Write onCreateReviewSubmit={onCreateReviewSubmit} />}
           />
            <Route path="/logout" element={<Logout/>} />
-          <Route path="/settings" element={<Settings />} />
+          <Route path="/settings" element={<Settings reviews={reviews}/>} />
           <Route path="/catalog/:reviewId" element={<Details />} />
-          <Route path="/catalog/:reviewId/edit" element={<Edit />} />
+          <Route path="/catalog/:reviewId/edit" element={<Edit  OnEditSubmit={OnEditSubmit}/>} />
           <Route path="*" element={<NotFound />} />
         </Routes>
 
         <Footer />
       </div>
-    </AuthContext.Provider>
+    </AuthProvider>
   );
 }
-
 export default App;
