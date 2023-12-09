@@ -1,12 +1,12 @@
 
 import SinglePost from "../../components/singlePost/SinglePost";
 import { useAuthContext } from "../../contexts/AuthContext";
-import Footer from "../../components/footer/Footer";
 
-export default function MyList({
-  reviews,
-}) {
+import { useReviewContext } from "../../contexts/ReviewContext";
+
+export default function MyList() {
   const { userId } = useAuthContext();
+  const {reviews} = useReviewContext()
 
   // Filter reviews that match the current user
   const userReviews = reviews.filter(x => x._ownerId === userId);

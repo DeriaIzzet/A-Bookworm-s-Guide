@@ -3,13 +3,12 @@ import Header from "../../components/header/Header";
 import Sidebar from "../../components/sidebar/Sidebar";
 import "./Homepage.css";
 import Post from "../../components/post/Post";
+import { useReviewContext } from "../../contexts/ReviewContext";
 
 
 
-export default function Homepage({
-  reviews
-}) {
-  
+export default function Homepage() {
+  const {reviews} = useReviewContext()
   return (
     <>
       <Header />

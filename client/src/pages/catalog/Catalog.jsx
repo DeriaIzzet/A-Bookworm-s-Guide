@@ -1,11 +1,11 @@
 import './Catalog.css'
 import pictureHeader from "../../../public/cool-writing.jpeg"
 import SinglePost from "../../components/singlePost/SinglePost";
+import { useReviewContext } from '../../contexts/ReviewContext';
 
 
-export default function Catalog({
-  reviews,
-}) {
+export default function Catalog() {
+  const {reviews} = useReviewContext()
   return (
     <section className="catalog-section">
       <div className="header">
