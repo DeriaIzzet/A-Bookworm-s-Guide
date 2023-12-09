@@ -2,11 +2,14 @@ import { createContext, useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
  import { useLocalStorage } from '../hooks/useLocalStorage'; 
 import { authServiceMaker } from '../services/authService';
+
 export const AuthContext = createContext();
+
 export const AuthProvider = ({
     children,
 }) => {
     const [auth, setAuth] = useLocalStorage('auth',{});
+    const [error, setError] = useState(null);
     const navigate = useNavigate();
 
     const authService = authServiceMaker(auth.accessToken)
@@ -14,32 +17,27 @@ export const AuthProvider = ({
     const onLoginSubmit = async (data) => {
         try {
           const result = await authService.login(data);
-    
           setAuth(result);
-    
           navigate("/");
         } catch (error) {
-          console.log("There is a problem");
+          setError("There was an error during login. Please try again.");
         }
       };
-
+    
       const onRegisterSubmit = async (values) => {
         const { confirmPassword, ...registerData } = values;
         if (confirmPassword !== registerData.password) {
-            return;
+          return;
         }
     
         try {
-            const result = await authService.register(registerData);
-    
-            setAuth(result);
-    
-            navigate('/');
+          const result = await authService.register(registerData);
+          setAuth(result);
+          navigate('/');
         } catch (error) {
-            console.log('There is a problem');
+          setError("There was an error during registration. Please try with another user information.");
         }
-    };
-
+      };
     const onLogout = async () => {
         await authService.logout();
    
@@ -55,6 +53,7 @@ export const AuthProvider = ({
         userEmail: auth.email,
         userUsername: auth.username,
         isAuthenticated: !!auth.accessToken,
+        error,
       };
 
     return (
