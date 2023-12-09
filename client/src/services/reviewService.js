@@ -23,12 +23,6 @@ export const reviewServiceMaker = (token) => {
         return result;
     };
 
-    const addComment = async (reviewId, data) => {
-        const result = await request.post(`${baseUrl}/${reviewId}/comments`, data);
-
-        return result;
-    };
-
     const edit = (reviewId, data) => request.put(`${baseUrl}/${reviewId}`, data);
 
     const deleteReview = (reviewId) => request.delete(`${baseUrl}/${reviewId}`);
@@ -39,7 +33,6 @@ export const reviewServiceMaker = (token) => {
         getOne,
         create,
         edit,
-        addComment,
         delete: deleteReview,
     };
 }
