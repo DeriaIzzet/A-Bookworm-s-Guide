@@ -14,13 +14,14 @@ import Topbar from "./components/topbar/Topbar";
 import Homepage from "./pages/homepage/Homepage";
 import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
-import Settings from "./pages/settings/Settings";
+
 import Write from "./pages/write/Write";
 import Catalog from "./pages/catalog/Catalog";
 import Details from "./components/details/Details";
 import NotFound from "./pages/NotFound/NotFound";
 import Logout from "./pages/logout/Logout"
 import Edit from "./components/edit/Edit";
+import MyList from "./pages/myList/MyList";
 
 function App() {
   const navigate = useNavigate();
@@ -64,7 +65,7 @@ function App() {
             element={<Write onCreateReviewSubmit={onCreateReviewSubmit} />}
           />
            <Route path="/logout" element={<Logout/>} />
-          <Route path="/settings" element={<Settings reviews={reviews}/>} />
+          <Route path="/settings" element={<MyList reviews={reviews}/>} />
           <Route path="/catalog/:reviewId" element={<Details />} />
           <Route path="/catalog/:reviewId/edit" element={<Edit  OnEditSubmit={OnEditSubmit}/>} />
           <Route path="*" element={<NotFound />} />
